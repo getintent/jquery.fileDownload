@@ -483,7 +483,7 @@ $.extend({
         var promise = deferred.promise();
         promise.abort = function() {
             cleanUp();
-            $iframe.attr('src', '').html('');
+            $iframe.remove();
             internalCallbacks.onAbort(fileUrl);
         };
         return promise;
